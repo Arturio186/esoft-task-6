@@ -20,15 +20,11 @@ type UserFieldsToBoolean = {
 
 // Реализуйте функцию, которая принимает ключи интерфейса User и возвращает их типы
 function getUserFieldType(key: keyof User2) {
-  // Верните тип ключа
-  // WTFFFFF????????
-  // ВЕРНУСЬ ПОЗЖЕ((((((
-  const helper: User2 = { id: 0, name: "", email: "", age: 0 };
-
-  return typeof helper[key]
+  return typeof key
 }
 
 // Используйте эту функцию для получения типа поля 'age' и 'name'
 const ageType = getUserFieldType("age");
 const nameType = getUserFieldType("name");
+console.log(ageType, nameType)
 //---------------------------------------------------------------------------------
